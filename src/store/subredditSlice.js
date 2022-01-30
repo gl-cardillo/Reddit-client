@@ -1,7 +1,5 @@
 import { createSlice} from '@reduxjs/toolkit';
 
-
-
 const subredditSlice = createSlice({
     name: 'subreddits',
     initialState: {
@@ -26,7 +24,6 @@ const subredditSlice = createSlice({
 });
 
 
-
 export const fetchSubreddits = () => async  (dispatch) => {
     try {
         dispatch(getSubredditsPending());
@@ -45,3 +42,4 @@ export const {getSubredditsPending, getSubredditsFulfilled, getSubredditsFailed}
 
 export default subredditSlice.reducer;
 export  const selectSubreddit = (state) => state.subreddits.subreddits;
+export const selectLoadingSubreddit = (state) => state.subreddits.isPending;
