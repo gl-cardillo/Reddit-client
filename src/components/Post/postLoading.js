@@ -10,15 +10,11 @@ import {
 const PostLoading = () => {
     return (
         <article >
-            <div className="score-container">
-                <button className="upvote" type="button" >
-                    <TiArrowUpThick className={`icon-action `} />
-                </button>
+            <div className="score-container">            
+                <TiArrowUpThick className={`icon-action `} />              
                 <div className="ups">
                 </div>
-                <button className="downvote" type="button" >
-                    <TiArrowDownThick className={`icon-action `}/>
-                </button>
+                <TiArrowDownThick className={`icon-action `}/>         
             </div>
             <div className="image-comments-container loading">
                 <div className="pics-title">
@@ -27,10 +23,8 @@ const PostLoading = () => {
                     <Skeleton width="200px" />
                     <div className="name-comment">
                         <div className="author">
-                        </div>
-                        <button type="button comments"  >
-                            <TiMessage className="icon-action message"  />                                               
-                        </button>
+                        </div>            
+                            <TiMessage className="icon-action message"  />                                                 
                     </div>
                 </div>
             </div>         

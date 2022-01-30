@@ -77,7 +77,9 @@ const Post = (subreddit) => {
         return (
             <div className="error" >
                 <h2 >Sorry, I can't find this page :( </h2>
-                <button className="error-button" onClick={handleClick}>Go back!</button>
+                <button className="error-button" 
+                        onClick={handleClick}
+                        aria-label="button for go back">Go back!</button>
             </div>
         )
     }
@@ -118,7 +120,10 @@ const Post = (subreddit) => {
                                         <div className="time">
                                             {moment.unix(post.created_utc).fromNow()}
                                         </div>
-                                        <button type="button" className="comments-button" onClick={() => onToggleShowingComments(index, post.permalink)} >
+                                        <button type="button"
+                                                className="comments-button" 
+                                                onClick={() => onToggleShowingComments(index, post.permalink)} 
+                                                aria-label="button for show comments" >
                                             <TiMessage className="icon-action message"  />
                                             {post.num_comments}                                
                                         </button>

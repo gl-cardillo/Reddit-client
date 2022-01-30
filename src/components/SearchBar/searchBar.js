@@ -35,7 +35,9 @@ const SearchBar = () => {
                             placeholder='Search'  
                             onChange={handleSearch} 
                             />
-                    <button type="submit" onClick={handleSearchOnSubmit}>
+                    <button type="submit" 
+                            onClick={handleSearchOnSubmit}
+                            aria-label="button submit search">
                         <FaSearch className="search-action" />
                     </button>
                 </form>

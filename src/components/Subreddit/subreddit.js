@@ -48,6 +48,7 @@ const Subreddit = () => {
                                 <button type='button'
                                         onClick={handleOnClick} 
                                         value={subreddit.display_name}
+                                        aria-label="button select subredit"
                                 >
                                 <img src={subreddit.icon_img ||`https://api.adorable.io/avatars/25/${subreddit.display_name}` } 
                                     style={{ border: `3px solid ${subreddit.primary_color}` }} 
